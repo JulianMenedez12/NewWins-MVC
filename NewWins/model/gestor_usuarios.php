@@ -199,7 +199,7 @@ class GestorUsuarios
         $user = null;
 
         // Preparar y ejecutar la consulta SQL para obtener el usuario por correo electrónico
-        $stmt = $conn->prepare("SELECT nombre_usuario, nombre, apellido, ubicacion, correo_electronico FROM usuarios_registrados WHERE correo_electronico = ?");
+        $stmt = $conn->prepare("SELECT nombre_usuario, nombre, foto_perfil, apellido, ubicacion, correo_electronico FROM usuarios_registrados WHERE correo_electronico = ?");
         if ($stmt === false) {
             throw new Exception("Error preparando la consulta: " . $conn->error);
         }

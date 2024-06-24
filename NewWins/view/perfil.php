@@ -34,9 +34,9 @@ $user = GestorUsuarios::getUserByEmail($userEmail);
                 <div class="card mb-4 mb-xl-0">
                     <div class="card-header">Foto de Perfil</div>
                     <div class="card-body text-center">
-                        <img class="img-account-profile rounded-circle mb-2" src="<?php echo htmlspecialchars($user['foto_perfil'] ?: 'http://bootdey.com/img/Content/avatar/avatar1.png'); ?>" alt="">
+                        <img class="img-account-profile mb-2" src="<?php echo htmlspecialchars($user['foto_perfil'] ?: 'http://bootdey.com/img/Content/avatar/avatar1.png'); ?>" alt="">
                         <div class="small font-italic text-muted mb-4">JPG o PNG máximo 5 MB</div>
-                        <form action="../controller/subir_foto_perfil.php" method="POST" enctype="multipart/form-data">
+                        <form action="../controller/upload_profile.php" method="POST" enctype="multipart/form-data">
                             <input type="file" name="foto_perfil" accept="image/*" required>
                             <button class="btn btn-primary" type="submit">Subir Nueva imagen</button>
                         </form>
