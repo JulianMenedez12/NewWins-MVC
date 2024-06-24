@@ -10,38 +10,22 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 // Verificar si el formulario fue enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verificar si todos los campos obligatorios están presentes (puedes agregar más validaciones según necesites)
-    if (isset($_POST["inputUsername"]) && isset($_POST["inputFirstName"]) && isset($_POST["inputLastName"]) && isset($_POST["inputLocation"]) && isset($_POST["inputEmailAddress"])) {
+// Obtener los datos del formulario
+$username = $_POST['inputUsername'];
+$firstName = $_POST['inputFirstName'];
+$lastName = $_POST['inputLastName'];
+$location = $_POST['inputLocation'];
+$email = $_POST['inputEmailAddress'];
+$currentEmail = $_SESSION['correo'];
 
-        // Recoger los datos del formulario
-        $idUsuario = $_SESSION['user_id'];
-        $username = $_POST['inputUsername'];
-        $nombre = $_POST["inputFirstName"];
-        $apellido = $_POST["inputLastName"];
-        $ubicacion = $_POST["inputLocation"];
-        $correo = $_POST["inputEmailAddress"];
+// Actualizar la información del usuario
+GestorUsuarios::updateUser($currentEmail, $username, $firstName, $lastName, $location, $email);
 
-        // Instanciar el gestor de usuarios y llamar al método para actualizar el perfil
-        $gestorUsuarios = new GestorUsuarios();
-        $actualizacionExitosa = $gestorUsuarios->actualizarPerfil($idUsuario, $username, $nombre, $apellido, $ubicacion, $correo);
-
-        if ($actualizacionExitosa) {
-            // Redirigir a la página de perfil con un mensaje de éxito
-            header("Location: ../view/perfil.php?exito=perfil_actualizado");
-            exit();
-        } else {
-            // Redirigir a la página de edición de perfil con un mensaje de error
-            header("Location: ../view/perfil.php?error=actualizacion_fallida");
-            exit();
-        }
-    } else {
-        // Redirigir a la página de edición de perfil con un mensaje de error si faltan campos
-        header("Location: ../view/perfil.php?error=campos_obligatorios");
-        exit();
-    }
-} else {
-    // Redirigir a la página de edición de perfil si el formulario no fue enviado
-    header("Location: ../view/perfil.php");
-    exit();
+// Actualizar la sesión si se cambió el correo electrónico
+if ($currentEmail != $email) {
+    $_SESSION['correo'] = $email;
 }
+
+// Redirigir a la página de perfil
+header("Location: ../view/perfil.php");
+exit;

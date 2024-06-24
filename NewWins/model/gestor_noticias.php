@@ -40,12 +40,13 @@ class GestorContenido
 
     public function listarNoticias()
     {
-        $sql = "SELECT a.id, c.nombre AS categoria, a.titulo, a.contenido 
+        $sql = "SELECT a.id, c.nombre AS categoria, a.titulo, a.contenido, a.url 
                 FROM articulos a
                 JOIN categorias c ON a.categoria_id = c.id";
         $result = $this->conn->query($sql);
         return $result;
     }
+
 
     public function eliminarNoticia($id)
     {

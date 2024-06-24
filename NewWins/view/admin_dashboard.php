@@ -8,7 +8,6 @@ if (!isset($_SESSION['correo'])) {
 include 'header.php';
 include '../model/conexion.php';
 include '../model/gestor_noticias.php';
-
 ?>
 
 <div class="col-md-9">
@@ -33,15 +32,12 @@ include '../model/gestor_noticias.php';
                     <div class="form-group">
                         <label for="categoria_id">Categoría:</label>
                         <select class="form-control" id="categoria_id" name="categoria_id" required>
-
                             <?php
                             include '../controller/listar_categoria.php';
                             echo aa();
-
                             ?>
                         </select>
                     </div>
-
                     <button type="submit" class="btn btn-primary">Subir Noticia</button>
                 </form>
             </div>
@@ -53,7 +49,7 @@ include '../model/gestor_noticias.php';
         <div class="card">
             <div class="card-body">
                 <!-- Formulario para crear categorías -->
-                <form action="../controller/crear_categoria.php" method="post" enctype="multipart/form-data">
+                <form action="../controller/crear_categoria.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -63,10 +59,10 @@ include '../model/gestor_noticias.php';
                         <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="imagen">Imagen:</label>
-                        <input type="file" class="form-control-file" id="imagen" name="imagen">
+                        <label for="imagen">Imagen (URL):</label>
+                        <input type="text" class="form-control" id="imagen" name="imagen">
                     </div>
-                    <button type="submit" class="btn btn-primary">Crear Categoría</button>
+                    <button type="submit" class="btn btn-secondary">Crear Categoría</button>
                 </form>
             </div>
         </div>
