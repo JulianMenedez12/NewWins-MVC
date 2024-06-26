@@ -11,6 +11,7 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 
 <head>
+    <link rel="icon" href="../img/logo.png" type="image/png" >
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q99HS3X12S"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,7 +25,7 @@ if (!isset($_SESSION['correo'])) {
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/styles.css"> <!-- Vincula tu archivo CSS externo -->
@@ -47,13 +48,13 @@ if (!isset($_SESSION['correo'])) {
                         <a class="nav-link" href="gestionar_categorias.php">Gestionar Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gestionar_articulos.php">Gestionar Artículos</a>
+                        <a class="nav-link" href="gestionar_articulos.php">Gestionar Artículos <i class='bx bx-list-ul' ></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="noticias.php">Ver Usuarios</a>
+                        <a class="nav-link" href="noticias.php">Ver Usuarios <i class='bx bxs-user-account'></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="manage_bandeja.php">Bandeja de Mensajes</a>
+                        <a class="nav-link" href="manage_bandeja.php">Bandeja de Mensajes <i class='bx bxs-inbox'></i></a>
                     </li>
                 </ul>
                 <!-- Menú desplegable -->

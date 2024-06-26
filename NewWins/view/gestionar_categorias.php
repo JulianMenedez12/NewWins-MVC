@@ -8,7 +8,9 @@ if (!isset($_SESSION['correo'])) {
 
 include 'header.php';
 ?>
-
+<head>
+    <title>Gestion de categorias</title>
+</head>
 <div class="container-fluid">
     <div class="mt-4">
         <?php
@@ -44,7 +46,8 @@ include 'header.php';
                     echo '<td>' . $categoria["descripcion"] . '</td>';
                     echo '<td><img src="' . $categoria["imagen"] . '" alt="' . $categoria["nombre"] . '"></td>';
                     echo '<td>';
-                    echo '<a href="../controller/eliminar_categoria.php?id=' . $categoria["id"] . '" class="btn btn-danger btn-sm">Eliminar</a>';
+                    echo '<a href="../controller/eliminar_categoria.php?id=' . $categoria["id"] . '" class="btn btn-danger btn-sm">Eliminar <i class="bx bxs-trash"></i></i></a>';
+
                     echo '</td>';
                     echo '</tr>';
                 }

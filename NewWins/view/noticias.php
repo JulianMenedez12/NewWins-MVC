@@ -13,7 +13,9 @@ require_once '../model/gestor_usuarios.php';
 $gestorUsuarios = new GestorUsuarios();
 $usuarios = $gestorUsuarios->listarUsuarios();
 ?>
-
+<head>
+    <title>Gestion de usuarios</title>
+</head>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-9">

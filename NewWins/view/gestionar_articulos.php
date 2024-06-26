@@ -7,7 +7,9 @@ if (!isset($_SESSION['correo'])) {
 }
 include 'header.php';
 ?>
-
+<head>
+    <title>Gestion de articulos</title>
+</head>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-9">
@@ -26,7 +28,7 @@ include 'header.php';
                         echo '<div class="table-responsive">';
                         echo '<table class="table table-bordered table-striped">';
                         echo '<thead class="table-dark">';
-                        echo '<tr><th>ID</th><th>Categoría</th><th>Título</th><th>Contenido</th><th>Imagen</th><th>Acciones</th></tr>';
+                        echo '<tr><th>ID<br> <i class="bx bx-hash"></i></th><th>Categoría<br> <i class="bx bxs-category-alt"></i></th><th>Título<br> <i class="bx bx-list-ul"></i></th><th>Contenido<br> <i class="bx bxs-book-content" ></i></th><th>Imagen<br><i class="bx bx-images" ></i></th><th>Acciones<br><i class="bx bx-slider"></i></th></tr>';
                         echo '</thead>';
                         echo '<tbody>';
 
@@ -45,7 +47,7 @@ include 'header.php';
                             }
                             
                             echo '<td>';
-                            echo '<a href="../controller/eliminar_noticia.php?id=' . htmlspecialchars($row["id"]) . '" class="btn btn-danger btn-sm">Eliminar</a>';
+                            echo '<a href="../controller/eliminar_noticia.php?id=' . htmlspecialchars($row["id"]) . '" class="btn btn-danger btn-sm">Eliminar <i class="bx bxs-trash"></i></a>';
                             echo '</td>';
                             echo '</tr>';
                         }

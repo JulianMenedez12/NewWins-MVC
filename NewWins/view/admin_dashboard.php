@@ -9,7 +9,7 @@ include 'header.php';
 include '../model/conexion.php';
 include '../model/gestor_noticias.php';
 ?>
-
+<title>Admin Dashboard</title>
 <div class="col-md-9">
     <div id="noticias" class="mt-4">
         <h4>Noticias</h4>
@@ -38,7 +38,7 @@ include '../model/gestor_noticias.php';
                             ?>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Subir Noticia</button>
+                    <button type="submit" class="btn btn-primary">Subir Noticia <br><i class='bx bx-upload' ></i></button>
                 </form>
             </div>
         </div>
@@ -62,7 +62,7 @@ include '../model/gestor_noticias.php';
                         <label for="imagen">Imagen (URL):</label>
                         <input type="text" class="form-control" id="imagen" name="imagen">
                     </div>
-                    <button type="submit" class="btn btn-secondary">Crear Categoría</button>
+                    <button type="submit" class="btn btn-secondary">Crear Categoría <br><i class='bx bxs-category'></i></button>
                 </form>
             </div>
         </div>
