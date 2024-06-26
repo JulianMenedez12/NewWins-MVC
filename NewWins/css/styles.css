@@ -1,0 +1,409 @@
+/* Estilo para el logo fuera del navbar */
+.navbar-brand.outside-brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.navbar-brand.outside-brand img {
+    max-height: 90px;
+}
+
+/* Estilo para el navbar */
+.navbar {
+    background-color: #000;
+    padding-left: 200px;
+    /* Ajusta el padding para evitar solapamiento con el logo */
+}
+
+.navbar-nav {
+    margin-left: auto;
+    /* Empuja los elementos hacia la derecha */
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    /* Letras blancas */
+    margin-right: 20px;
+    /* Espacio entre los enlaces */
+    transition: color 0.3s ease;
+    /* Transición suave para el cambio de color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #bbb !important;
+    /* Color al pasar el mouse */
+}
+
+/* Estilo para el dropdown */
+.dropdown-toggle {
+    color: #fff;
+    /* Color del ícono del usuario */
+    background-color: transparent;
+    /* Fondo transparente para el botón */
+    border: none;
+    /* Sin borde */
+}
+
+.dropdown-toggle:hover {
+    color: #fff;
+    /* Color del ícono del usuario */
+    background-color: transparent;
+    /* Fondo transparente para el botón */
+    border: none;
+    /* Sin borde */
+}
+
+/* Estilo específico para el ícono del menú desplegable cuando se vuelve responsivo */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ff4b4b' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Ícono del botón del menú desplegable con color rojo */
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ff4b4b' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M23 7l-9 9 9 9'/%3e%3cpath stroke='%23ff4b4b' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M9 7l9 9-9 9'/%3e%3c/svg%3e");
+    /* Ícono del botón del menú desplegable con color rojo cuando está abierto */
+}
+/* Ajuste del margen izquierdo para el menú desplegable */
+.navbar .dropdown-menu {
+    margin-left: -85px;
+    /* Ajusta el margen izquierdo según sea necesario */
+}
+        
+/*admin_dasboard*/
+
+
+/* Estilos para los formularios */
+.form-group label {
+    color: #333;
+    /* Color de texto principal */
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    /* Borde gris suave */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interior */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #ff4b4b;
+    /* Borde rojo al estar en foco */
+    box-shadow: 0 0 0 0.2rem rgba(255, 75, 75, 0.25);
+    /* Sombra suave al estar en foco */
+}
+
+.btn-primary {
+    background-color: #ff4b4b;
+    /* Rojo */
+    border-color: #ff4b4b;
+    /* Borde rojo */
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+.btn-primary:hover {
+    background-color: #e63946;
+    /* Rojo más oscuro en hover */
+    border-color: #e63946;
+    /* Borde rojo más oscuro en hover */
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+.btn-secondary {
+    background-color: #ff4b4b;
+        /* Rojo */
+        border-color: #ff4b4b;
+        /* Borde rojo */
+        color: #ffffff;
+        /* Texto blanco */
+}
+
+.btn-secondary:hover {
+    background-color: #e63946;
+        /* Rojo más oscuro en hover */
+        border-color: #e63946;
+        /* Borde rojo más oscuro en hover */
+        color: #ffffff;
+        /* Texto blanco */
+}
+
+
+/*gestionar_categorias*/
+
+
+/* Estilos adicionales para la tabla de categorías */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    /* Color de texto principal */
+}
+
+.table th,
+.table td {
+    border: 1px solid #dee2e6;
+    /* Borde de las celdas */
+    padding: 12px;
+    /* Espaciado interior */
+    text-align: center;
+    /* Alineación central del texto */
+}
+
+.table th {
+    background-color: #f8f9fa;
+    /* Fondo gris claro para las cabeceras */
+    border-color: #dee2e6;
+    /* Borde gris para las cabeceras */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+/* Estilos para las imágenes dentro de la tabla */
+.table img {
+    max-width: 100%;
+    /* Ancho máximo */
+    height: auto;
+    /* Altura automática para mantener la proporción */
+    max-height: 100px;
+    /* Altura máxima para evitar que las imágenes sean demasiado grandes */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    display: block;
+    /* Para asegurar que la imagen se comporte como un bloque */
+    margin: 0 auto;
+    /* Centrar la imagen dentro de su contenedor */
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    /* Rojo oscuro */
+    border-color: #dc3545;
+    /* Borde rojo oscuro */
+    color: #fff;
+    /* Texto blanco */
+    padding: 6px 12px;
+    /* Espaciado interior */
+    font-size: 14px;
+    /* Tamaño de fuente */
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    /* Rojo más oscuro en hover */
+    border-color: #c82333;
+    /* Borde rojo más oscuro en hover */
+    color: #fff;
+    /* Texto blanco */
+}
+
+.container-fluid {
+    padding: 20px;
+    /* Espaciado interior */
+}
+
+
+/* gestionar_articulos*/
+
+
+
+
+/* Estilo para la tabla de noticias */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    /* Color de texto oscuro */
+    background-color: #fff;
+    /* Fondo blanco */
+    border-collapse: collapse;
+    /* Colapsar bordes de celda */
+}
+
+/* Estilo para las filas de encabezado */
+.table th {
+    background-color: #212529;
+    /* Rojo */
+    color: #fff;
+    /* Texto blanco */
+    border: 1px solid #dee2e6;
+    /* Borde gris claro */
+    padding: 8px;
+    /* Espaciado interno */
+}
+
+/* Estilo para las celdas de datos */
+.table td {
+    border: 1px solid #dee2e6;
+    /* Borde gris claro */
+    padding: 8px;
+    /* Espaciado interno */
+}
+
+/* Estilo para filas impares */
+.table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Fondo gris claro para filas impares */
+}
+
+/* Estilo para las imágenes */
+.table td img.img-thumbnail {
+    max-width: 100px;
+    /* Tamaño máximo de imagen */
+    max-height: 100px;
+    display: block;
+    /* Mostrar como bloque */
+    margin: 0 auto;
+    /* Centrar imagen dentro de la celda */
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+/* Estilo para los botones de acción */
+.table td a.btn {
+    margin-right: 5px;
+    /* Espacio entre botones */
+}
+
+/* Hover sobre filas */
+.table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+    /* Fondo azul claro al pasar el ratón */
+}
+
+
+/* noticias.php*/
+
+
+/* Estilo para la tabla de usuarios */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    /* Color de texto oscuro */
+    background-color: #fff;
+    /* Fondo blanco */
+    border-collapse: collapse;
+    /* Colapsar bordes de celda */
+}
+
+/* Estilo para las filas de encabezado */
+.table th {
+    background-color: #000;
+    /* Rojo */
+    color: #fff;
+    /* Texto blanco */
+    border: 1px solid #dee2e6;
+    /* Borde gris claro */
+    padding: 8px;
+    /* Espaciado interno */
+}
+
+/* Estilo para las celdas de datos */
+.table td {
+    border: 1px solid #dee2e6;
+    /* Borde gris claro */
+    padding: 8px;
+    /* Espaciado interno */
+}
+
+/* Estilo para filas impares */
+.table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Fondo gris claro para filas impares */
+}
+
+/* Hover sobre filas */
+.table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+    /* Fondo azul claro al pasar el ratón */
+}
+
+/* Responsivo */
+.table-responsive {
+    overflow-x: auto;
+    /* Scroll horizontal si es necesario */
+}
+/*estilos para la pestraña de cambiar contraseña.*/
+            	body {
+            	    margin-top: 20px;
+            	    background-color: #f2f6fc;
+            	    color: #69707a;
+            	}
+        
+            	.img-account-profile {
+            	    height: 10rem;
+            	}
+        
+            	.rounded-circle {
+            	    border-radius: 50% !important;
+            	}
+        
+            	.card {
+            	    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+            	}
+        
+            	.card .card-header {
+            	    font-weight: 500;
+            	}
+        
+            	.card-header:first-child {
+            	    border-radius: 0.35rem 0.35rem 0 0;
+            	}
+        
+            	.card-header {
+            	    padding: 1rem 1.35rem;
+            	    margin-bottom: 0;
+            	    background-color: rgba(33, 40, 50, 0.03);
+            	    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+            	}
+        
+            	.form-control,
+            	.dataTable-input {
+            	    display: block;
+            	    width: 100%;
+            	    padding: 0.875rem 1.125rem;
+            	    font-size: 0.875rem;
+            	    font-weight: 400;
+            	    line-height: 1;
+            	    color: #69707a;
+            	    background-color: #fff;
+            	    background-clip: padding-box;
+            	    border: 1px solid #c5ccd6;
+            	    -webkit-appearance: none;
+            	    -moz-appearance: none;
+            	    appearance: none;
+            	    border-radius: 0.35rem;
+            	    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            	}
+        
+            	.nav-borders .nav-link.active {
+            	    color: #0061f2;
+            	    border-bottom-color: #0061f2;
+            	}
+        
+            	.nav-borders .nav-link {
+            	    color: #69707a;
+            	    border-bottom-width: 0.125rem;
+            	    border-bottom-style: solid;
+            	    border-bottom-color: transparent;
+            	    padding-top: 0.5rem;
+            	    padding-bottom: 0.5rem;
+            	    padding-left: 0;
+            	    padding-right: 0;
+            	    margin-left: 1rem;
+            	    margin-right: 1rem;
+            	}
+        
+            	.btn-danger-soft {
+            	    color: #000;
+            	    background-color: #f1e0e3;
+            	    border-color: #f1e0e3;
+            	}
